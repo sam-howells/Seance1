@@ -18,7 +18,7 @@ public class Entreprise {
     public static void ToString(Entreprise e){
         System.out.println("Entreprise "+e.nomEntreprise+" a pour employés : ");
         for(Employe emp : listeEmployes){
-            emp.toString();
+            emp.ToString(emp);
         }
     }
     public void addListeEmployes(Employe e ) {
@@ -31,5 +31,12 @@ public class Entreprise {
 
     public void setNomEntreprise(String nomEntreprise) {
         this.nomEntreprise = nomEntreprise;
+    }
+
+    @Override
+    public String toString() {
+        return "Entreprise{" +
+                "nomEntreprise='" + nomEntreprise + '\'' + " liste employé : " + listeEmployes +
+                '}';
     }
 }
